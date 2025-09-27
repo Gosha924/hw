@@ -1,20 +1,21 @@
 #include <stdio.h>
 
-int main(void) {
+int main(void)
+{
     /*
     Моя программа переставляет массив чисел от 1 до 5 в массив 3 4 5 1 2
     */
-    int array[] = {1, 2, 3, 4, 5};
-    int zero_elem = array[0]; 
-    int first_elem = array[1];
+    int array[] = {1, 2, 3, 4, 5 };
+    int zeroElem = array[0];
+    int firstElem = array[1];
     int len = sizeof(array) / sizeof(array[0]);
     for (int i = 0; i < len; i++) {
         if (i < 3) {
             array[i] = array[i + 2];
         } else if (i == 3) {
-            array[i] = zero_elem;
+            array[i] = zeroElem;
         } else {
-            array[i] = first_elem;
+            array[i] = firstElem;
         }
     }
     for (int i = 0; i < len; i++) {
