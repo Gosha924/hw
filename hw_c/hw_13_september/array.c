@@ -1,28 +1,22 @@
 #include <stdio.h>
 
-void perevarotArray(int array[], int n, int m) 
+void FirstSecondPerevarotArray(int array[], int lenn)
 {
-    for(int i = 0; i < 5; i++)
-    {
+    for (int i = 0; i < lenn / 2; i++) {
         int elem = array[i];
-        array[i] = array[10 - 1 - i];
-        array[10 - 1 - i] = elem;
+        array[i] = array[lenn - 1 - i];
+        array[lenn - 1 - i] = elem;
     }
-    for (int i = 0; i < m / 2; i++) {
-        int elem = array[i];
-        array[i] = array[m - 1 - i];
-        array[m - 1 - i] = elem;
-    }
+}
+
+void ThreePerevarotArray(int array[], int n, int m)
+{
     for (int j = 0; j < n / 2; j++) {
         int elem = array[j + m];
         array[j + m] = array[10 - 1 - j];
         array[10 - 1 - j] = elem;
     }
-    for (int i = 0; i < 10; i++) {
-        printf("%d ", array[i]);
-    }
 }
-
 
 int main(void)
 {
@@ -35,7 +29,12 @@ int main(void)
         printf("Некорректный ввод\n");
         return 0;
     }
-    perevarotArray(array, n, m);
+    FirstSecondPerevarotArray(array, 10);
+    FirstSecondPerevarotArray(array, m);
+    ThreePerevarotArray(array, n, m);
+    for (int i = 0; i < 10; i++) {
+        printf("%d ", array[i]);
+    }
     printf("\n");
     return 0;
 }
