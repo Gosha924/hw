@@ -1,10 +1,6 @@
+#include "stack.h"
 #include <stdio.h>
 #include <stdlib.h>
-
-typedef struct tag_obj {
-    int data;
-    struct tag_obj* next;
-} OBJ;
 
 OBJ* push(OBJ* top, int data)
 {
@@ -19,7 +15,6 @@ OBJ* pop(OBJ* top)
     if (top == NULL) {
         return top;
     }
-    printf("deleted %d\n", top->data);
     OBJ* ptr_next = top->next;
     free(top);
     return ptr_next;
@@ -34,7 +29,26 @@ void show(const OBJ* top)
     }
 }
 
-int main(void)
+int showElem(const OBJ* top, int index)
 {
-    return 0;
+    const OBJ* current = top;
+    int indexElem = 0;
+    while (current != NULL) {
+        if (indexElem == index) {
+            return current->data;
+        }
+        indexElem++;
+        current = current->next;
+    }
+}
+
+int lenStack(const OBJ* top)
+{
+    const OBJ* current = top;
+    int len = 0;
+    while (current != NULL) {
+        len++;
+        current = current->next;
+    }
+    return len;
 }
