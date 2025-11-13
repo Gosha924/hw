@@ -1,7 +1,7 @@
-#include "5_hw_c_stack/stack.h"
+#include <ctype.h>
 #include <stdio.h>
 #include <string.h>
-#include <ctype.h>
+#include "5_hw_c_stack/stack.h"
 
 void appendStr(char* str, char c)
 {
