@@ -19,3 +19,4 @@
 .clang-format
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode
+.idea/
