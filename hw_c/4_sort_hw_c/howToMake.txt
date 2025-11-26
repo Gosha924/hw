@@ -1,0 +1,5 @@
+# сборка приложения
+gcc main.c sort.s -o program
+
+# запуск приложения
+./program
