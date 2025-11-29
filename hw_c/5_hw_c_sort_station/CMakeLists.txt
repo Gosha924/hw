@@ -1,0 +1,23 @@
+cmake_minimum_required(VERSION 3.10)
+project(5_hw_c_sort_station LANGUAGES C)
+
+set(CMAKE_C_STANDARD 99)
+set(CMAKE_C_STANDARD_REQUIRED ON)
+add_compile_options(
+    -Wall
+    -Wextra
+    -Wpedantic
+    -Werror
+    -Wshadow
+    -Wconversion
+    -Wnull-dereference
+    -Wstack-protector
+    -Wstrict-prototypes
+  
+)
+
+add_library(stack 5_hw_c_stack/stack.c)
+target_include_directories(stack PUBLIC 5_hw_c_stack)
+
+add_executable(station station.c)
+target_link_libraries(station stack)
