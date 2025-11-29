@@ -8,8 +8,7 @@ int main(void)
     do {
         puts("Введите команду");
         scanf("%d", &command);
-        switch (command)
-        {
+        switch (command) {
         case 0:
             puts("Конец программы");
             break;
