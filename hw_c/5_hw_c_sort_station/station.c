@@ -1,7 +1,7 @@
-#include <ctype.h>
+#include "5_hw_c_stack/stack.h"
 #include <stdio.h>
 #include <string.h>
-#include "5_hw_c_stack/stack.h"
+#include <ctype.h>
 
 void appendStr(char* str, char c)
 {
@@ -10,14 +10,15 @@ void appendStr(char* str, char c)
     str[len + 1] = '\0';
 }
 
-int isOperator(char c) {
+int isOperator(char c) 
+{
     return c == '(' || c == '+' || c == '-' || c == '*' || c == '/' || c == ')';
 }
 
 // Функция для определения приоритета операторов
 int prioritet(char c)
 {
-    if (c == '+' || c == '-'){
+    if (c == '+' || c == '-') {
         return 1;
     }
     if (c == '*' || c == '/') {
