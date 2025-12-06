@@ -4,6 +4,7 @@ on:
   - push
   - pull_request:
 	branches:
+	    - '**'
 	    - '!5_hw_c_balance_skobka'
 	    - '!5_hw_c_balance_skobka_new'
 	    - '!5_hw_c_sort_station'
