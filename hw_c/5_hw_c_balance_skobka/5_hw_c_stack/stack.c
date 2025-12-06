@@ -1,6 +1,7 @@
+#include "stack.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include "stack.h"
+
 OBJ* push(OBJ* top, int data)
 {
     OBJ* ptr = malloc(sizeof(OBJ));
