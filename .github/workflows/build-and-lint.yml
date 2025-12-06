@@ -1,15 +1,12 @@
 name: Build and lint
 
 on:
-  - push
+  - push:
+	branches-ignore:
+	    - '5_hw*'
   - pull_request:
-	branches:
-	    - '**'
-	    - '!5_hw_c_balance_skobka'
-	    - '!5_hw_c_balance_skobka_new'
-	    - '!5_hw_c_sort_station'
-	    - '! 5_hw_sort_station_new'
-
+	branches-ignore:
+	    - '!5_hw*'
 jobs:
   build-and-lint:
     runs-on: ubuntu-latest
