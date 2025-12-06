@@ -2,11 +2,11 @@ name: Build and lint
 
 on:
   - push:
-	branches-ignore:
-	    - '5_hw*'
+      branches-ignore:
+        - '5_hw*'
   - pull_request:
-	branches-ignore:
-	    - '!5_hw*'
+      branches-ignore:
+        - '!5_hw*'
 jobs:
   build-and-lint:
     runs-on: ubuntu-latest
