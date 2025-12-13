@@ -1,5 +1,5 @@
 def heapify(array, n, i):
-    """ФУнкция для создания кучи"""
+    """Функция для создания кучи"""
     largest = i
     left = 2 * i + 1
     right = 2 * i + 2
@@ -18,10 +18,12 @@ def heap_sort(array):
         heapify(array, lenn , i)
     for i in range(lenn - 1, 0, -1):
         array[i], array[0] = array[0], array[i]
-        heapify(array, i , 0)
+        heapify(array, i, 0)
     return array
 
-count = int(input("Input array`s len: "))
-array = [int(input()) for i in range(count)]
-sort_array = heap_sort(array)
-print(sort_array)
+
+if __name__ == '__main__':
+    count = int(input("Input array`s len: "))
+    array = [int(input()) for i in range(count)]
+    sort_array = heap_sort(array)
+    print(sort_array)
