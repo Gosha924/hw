@@ -1,7 +1,6 @@
 #ifndef STACK_H
 #define STACK_H
 
-
 typedef struct tag_obj {
     int data;
     struct tag_obj* next;

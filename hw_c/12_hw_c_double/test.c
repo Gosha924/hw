@@ -1,10 +1,10 @@
 #include "double.h"
+#include <math.h>
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
-#include <math.h>
 
-// Вспомогательные функции для тестирования 
+// Вспомогательные функции для тестирования
 typedef struct {
     double input;
     bool expected_sign;

@@ -6,11 +6,11 @@
 void appendStr(char* str, char c)
 {
     int len = strlen(str);
-    str[len] = c; 
+    str[len] = c;
     str[len + 1] = '\0';
 }
 
-int isOperator(char c) 
+int isOperator(char c)
 {
     return c == '(' || c == '+' || c == '-' || c == '*' || c == '/' || c == ')';
 }

@@ -1,7 +1,7 @@
 #include "double.h"
-#include <stdio.h>
 #include <stdbool.h>
 #include <stdint.h>
+#include <stdio.h>
 
 bool getBit(uint64_t bits, int i)
 {
