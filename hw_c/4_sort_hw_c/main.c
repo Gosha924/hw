@@ -14,7 +14,6 @@ void printfArray(int numbers[], int len)
     printf("\n");
 }
 
-
 int main(void)
 {
     int numbers[MAX_NUMBERS];
