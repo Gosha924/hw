@@ -1,0 +1,20 @@
+name: Build and lint
+
+on:
+  push:
+    branches-ignore:
+      - '5_hw*'
+  pull_request:
+    branches-ignore:
+      - '5_h*'
+
+jobs:
+  build-and-lint:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v5
+      
+      - name: Check format
+        run: |
+          find . -path ./build -prune -o -type f -name '*.[ch]' -print | xargs clang-format-18 --style=file --dry-run -Werror
