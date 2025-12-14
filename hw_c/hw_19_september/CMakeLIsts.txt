@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 4.0)
+project(ThirdHW C)
+set(CMAKE_C_STANDART 11)
+
+add_executable(find_zero find_zero.c)
+add_executable(skobka skobka.c)
+add_executable(str str.c)
