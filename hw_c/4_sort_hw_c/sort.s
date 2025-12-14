@@ -2,9 +2,9 @@
 	.file	"sort.c"
 	.text
 	.align	2
-	.global	bubleSort
-	.type	bubleSort, %function
-bubleSort:
+	.global	bubbleSort
+	.type	bubbleSort, %function
+bubbleSort:
 .LFB0:
 	.cfi_startproc
 	stp	x29, x30, [sp, -16]!
@@ -196,6 +196,6 @@ bubleSort:
 	ret
 	.cfi_endproc
 .LFE0:
-	.size	bubleSort, .-bubleSort
+	.size	bubbleSort, .-bubbleSort
 	.ident	"GCC: (Ubuntu 14.2.0-19ubuntu2) 14.2.0"
 	.section	.note.GNU-stack,"",@progbits

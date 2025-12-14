@@ -1,10 +1,6 @@
+#include "sort.h"
 #include <stdio.h>
 #include <stdlib.h>
-
-// Объявление функции сортировки из второго файла
-extern int bubleSort(int arr[], int len);
-
-#define MAX_NUMBERS 100
 
 void printfArray(int numbers[], int len)
 {
@@ -16,11 +12,11 @@ void printfArray(int numbers[], int len)
 
 int main(void)
 {
-    int numbers[MAX_NUMBERS];
+    int numbers[100];
     int count = 0;
     char ch;
     printf("Введите числа через пробел (не более 100): ");
-    while (scanf("%d", &numbers[count]) == 1 && count < MAX_NUMBERS) {
+    while (scanf("%d", &numbers[count]) == 1 && count < 100) {
         count++;
         ch = getchar();
         if (ch == '\n') {
@@ -31,7 +27,7 @@ int main(void)
     printf("Исходный массив: ");
     printfArray(numbers, count);
 
-    int changes = bubleSort(numbers, count);
+    int changes = bubbleSort(numbers, count);
     printf("Отсортированный массив: ");
     printfArray(numbers, count);
     printf("Количество элементов, изменивших позицию: %d\n", changes);

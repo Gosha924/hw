@@ -1,7 +1,8 @@
+#include "sort.h"
 #include <stdio.h>
 
 // Функция сортировки пузырьком
-int bubleSort(int numbers[], int len)
+int bubbleSort(int numbers[], int len)
 {
     int original_positions[len];
     for (int i = 0; i < len; i++) {
