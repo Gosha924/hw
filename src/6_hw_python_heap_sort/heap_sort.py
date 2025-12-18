@@ -15,7 +15,7 @@ def heapify(array, n, i):
 def heap_sort(array):
     lenn = len(array)
     for i in range(lenn // 2 - 1, -1, -1):
-        heapify(array, lenn , i)
+        heapify(array, lenn, i)
     for i in range(lenn - 1, 0, -1):
         array[i], array[0] = array[0], array[i]
         heapify(array, i, 0)
