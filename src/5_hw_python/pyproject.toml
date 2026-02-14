@@ -1,0 +1,46 @@
+[project]
+name = "queens-problem"
+description = "Решение задачи о расстановке ферзей"
+requires-python = ">=3.8"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+
+[tool.ruff]
+select = ["F", "E", "W", "I", "B", "C", "N", "D", "UP", "ARG", "S", "T", "Q", "RUF", "ASYNC", "SIM", "PTH", "FLY", "AIR"]
+[tool.ruff.format]
+line-length = 90
+quote-style = "single"
+docstring-code-format = true
+docstring-code-line-length = "dynamic"
+
+[tool.ruff.lint]
+[tool.ruff.lint.isort]
+known-first-party = ["queens_problem"]
+
+[tool.ruff.lint.pylint]
+max-args = 6
+max-locals = 15
+
+[tool.ruff.lint.flake8-bugbear]
+extend-immutable-calls = ["frozenset", "tuple"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.perflint]
+enabled = true
+
+exclude = [
+    ".git",
+    ".github",
+    ".mypy_cache",
+    ".ruff_cache",
+    ".tox",
+    ".venv",
+    "__pycache__",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+]
